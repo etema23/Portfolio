@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Computer Science Major</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#what-i-do">What I Do</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#leadership">Leadership</a></li>
+                <li><a href="#book-of-month">Book of Month</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#matcha-game">Matcha Game</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="home" class="intro-section">
+        <div class="intro-content">
+            <div class="intro-text">
+                <h1 class="intro-title">Hi, I'm <span class="highlight">Erta Tema</span></h1>
+                <p class="intro-subtitle">Computer Science Student & Passionate Developer</p>
+                <p class="intro-description">Welcome to my digital garden. A collection of things I'm building, breaking, and rebuilding</p>
+                <div class="intro-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="intro-decoration">
+                <div class="leaf leaf-1"></div>
+                <div class="leaf leaf-2"></div>
+                <div class="leaf leaf-3"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <div class="section-arrow"><a href="#about" class="section-arrow-link">↓</a></div>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <!-- 
+                        TO ADD YOUR PHOTO:
+                        1. Add your photo file to your project (e.g., in a "photos" folder or root directory)
+                        2. Replace the src below with your photo path (e.g., "photos/profile.jpg" or "profile.jpg")
+                        3. Update the alt text with your name
+                    -->
+                    <!-- Update the src below to match your saved photo filename -->
+                    <img src="/Users/ertatema/Portfolio Web/Photos /image1.jpg" alt="Erta Tema" class="profile-photo" onerror="console.error('Image failed to load:', this.src); this.style.display='none'; const placeholder = this.nextElementSibling; if(placeholder) placeholder.style.display='flex';">
+                    <div class="image-placeholder">
+                        <span>👤</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p class="about-intro">I'm a passionate Computer Science major with a deep love for problem-solving and innovation.</p>
+                    <p>I've spent my time as a Computer Science major building a strong foundation in software development and system design. I love the challenge of turning complex logic into something elegant and efficient. I am always exploring new tech to stay sharp, but I make sure to leave plenty of room for life outside the terminal.</p>
+                    <p>When the laptop is closed, I am usually out chasing my next experience, whether it's exploring a hidden section in the city or hopping on a flight to the other side of the world. You can often find me on the volleyball court or in my kitchen trying to master the perfect matcha. I am also a huge reader and I am constantly on the hunt for my next great find, so check out my Book of the Month section to see what I am currently diving into. If you have a book that is a must-read, I would love to hear your recommendation.😊</p>
+                    <div class="about-stats">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Photo Gallery -->
+            <!-- 
+                TO ADD YOUR PHOTOS:
+                1. Create a "photos" folder in your project directory
+                2. Add your image files to that folder
+                3. Update the photoData array in script.js with your photo paths and captions
+            -->
+            <div class="photo-gallery">
+                <h3 class="gallery-title">Life in Frames</h3>
+                <div class="gallery-slider">
+                    <button class="gallery-nav-btn prev-btn" id="prev-photo" aria-label="Previous photo">‹</button>
+                    <div class="gallery-display">
+                        <div class="photo-container">
+                            <div class="photo-thumbnail">
+                                <img id="current-photo-img" src="" alt="Photo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23C4D5B2%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%236B8E6E%22 font-family=%22Arial%22 font-size=%2216%22 x=%22120%22 y=%22150%22%3EAdd your photos%3C/text%3E%3Ctext fill=%22%236B8E6E%22 font-family=%22Arial%22 font-size=%2214%22 x=%22100%22 y=%22170%22%3Ein photos folder%3C/text%3E%3C/svg%3E'">
+                            </div>
+                            <p class="photo-caption" id="current-photo-caption">Add your photo captions in script.js</p>
+                        </div>
+                        <div class="photo-indicators" id="photo-indicators">
+                            <!-- Indicators will be added by JavaScript -->
+                        </div>
+                    </div>
+                    <button class="gallery-nav-btn next-btn" id="next-photo" aria-label="Next photo">›</button>
+                </div>
+            </div>
+            
+            <!-- Photo Modal -->
+            <div class="photo-modal" id="photo-modal">
+                <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <button class="modal-close" id="modal-close">&times;</button>
+                    <div class="modal-image-container">
+                        <img id="modal-image" src="" alt="Photo">
+                    </div>
+                    <p class="modal-caption" id="modal-caption"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-arrow"><a href="#projects" class="section-arrow-link">↓</a></div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <!-- Add your project image: Update src to your image path (e.g., "Photos/leaksight.jpg") -->
+                        <img src="/Users/ertatema/Portfolio Web/Photos /Leaksight.jpeg" alt="LeakSight Project" onerror="this.style.display='none';">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>LeakSight</h3>
+                        <p>Designing and implementing a machine learning workflow to analyze side-channel data, detect leakage patterns, and measure the effectiveness of simple defenses.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">Matplotlib</span>
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">GitHub</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <!-- Add your project image: Update src to your image path (e.g., "Photos/smart-closet.jpg") -->
+                        <img src="/Users/ertatema/Portfolio Web/Photos /Closet 2.jpeg" alt="Smart Closet Project" onerror="this.style.display='none';">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Smart Closet</h3>
+                        <p>Built an AI-powered closet and outfit recommendation app that suggests outfits based on weather conditions and user preferences, using a full-stack setup to store clothing items, score outfit options, and generate personalized recommendations.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">Git</span>
+                            <span class="tag">Github</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <!-- Add your project image: Update src to your image path (e.g., "Photos/case-file.jpg") -->
+                        <img src="/Users/ertatema/Portfolio Web/Photos /Casefile.jpeg" alt="Case File Management System" onerror="this.style.display='none';">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Case File Management System</h3>
+                        <p>Built a Python-based case file management system for an immigration firm to organize client records, automate file tracking, and monitor case progress through a structured dashboard</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Google Drive API</span>
+                            <span class="tag">Excel</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <!-- Add your project image: Update src to your image path (e.g., "Photos/journaling.jpg") -->
+                        <img src="/Users/ertatema/Portfolio Web/Photos /Book.jpeg" alt="Journaling App" onerror="this.style.display='none';">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Journalling App</h3>
+                        <p>Built a full-stack journaling web app using the MERN stack that lets users write, save, and access journal entries from any browser. The project focused on learning how the frontend, backend, and database work together to store and manage user data through a clean and responsive interface.</p>
+                        <div class="project-tags">
+                            <span class="tag">Solidity</span>
+                            <span class="tag">Web3</span>
+                            <span class="tag">Ethereum</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <!-- Add your project image: Update src to your image path (e.g., "Photos/letterbox.jpg") -->
+                        <img src="/Users/ertatema/Portfolio Web/Photos /Letterbox.jpeg" alt="Letterbox for Books" onerror="this.style.display='none';">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Letterbox for Books</h3>
+                        <p>Developed a full-stack “Letterboxd for Books” web app with an API-based backend and a React frontend, allowing users to log books, rate and review their reads, and automatically fetch book details and cover art from a public book API.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">SQLAlchemy</span>
+                            <span class="tag">React</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <!-- Add your project image: Update src to your image path (e.g., "Photos/snake-game.jpg") -->
+                        <img src="/Users/ertatema/Portfolio Web/Photos /website.jpeg" alt="Snake Game" onerror="this.style.display='none';">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Personal Portfolio Website</h3>
+                        <p>Built and deployed a fully responsive personal portfolio website using HTML, CSS, and JavaScript, showcasing projects, skills, and leadership experience with smooth animations and interactive components.</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-arrow"><a href="#skills" class="section-arrow-link">↓</a></div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="skills-main-title">Skills</h2>
+            <h3 class="skills-subtitle">Technical Skills</h3>
+            <div class="skills-badges-grid">
+                <div class="skill-badge skill-python">🐍 Python</div>
+                <div class="skill-badge skill-java">☕ Java</div>
+                <div class="skill-badge skill-javascript">🟡 JavaScript</div>
+                <div class="skill-badge skill-typescript">💠 TypeScript</div>
+                <div class="skill-badge skill-cpp">🔵 C++</div>
+                <div class="skill-badge skill-csharp">🟣 C#</div>
+                <div class="skill-badge skill-sql">🗄️ SQL</div>
+                <div class="skill-badge skill-html">🌐 HTML</div>
+                <div class="skill-badge skill-css">🎨 CSS</div>
+                <div class="skill-badge skill-react">⚛️ React</div>
+                <div class="skill-badge skill-nextjs">⚡ Next.js</div>
+                <div class="skill-badge skill-nodejs">🟢 Node.js</div>
+                <div class="skill-badge skill-fastapi">🚀 FastAPI</div>
+                <div class="skill-badge skill-flask">🌶️ Flask</div>
+                <div class="skill-badge skill-pytorch">🔥 PyTorch</div>
+                <div class="skill-badge skill-tensorflow">🧠 TensorFlow</div>
+                <div class="skill-badge skill-pandas">🐼 Pandas</div>
+                <div class="skill-badge skill-tailwind">🌬️ Tailwind</div>
+                <div class="skill-badge skill-postgresql">🐘 PostgreSQL</div>
+                <div class="skill-badge skill-mysql">🐬 MySQL</div>
+                <div class="skill-badge skill-aws">☁️ AWS</div>
+                <div class="skill-badge skill-docker">🐳 Docker</div>
+                <div class="skill-badge skill-git">🍃 Git</div>
+                <div class="skill-badge skill-powerbi">📊 Power BI</div>
+                <div class="skill-badge skill-tableau">📈 Tableau</div>
+                <div class="skill-badge skill-jira">🎯 Jira</div>
+                <div class="skill-badge skill-figma">🎨 Figma</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-arrow"><a href="#leadership" class="section-arrow-link">↓</a></div>
+
+    <!-- Leadership Opportunities Section -->
+    <section id="leadership" class="leadership-section">
+        <div class="container">
+            <h2 class="section-title">Leadership & Involvement</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-icon">👥</span>
+                    </div>
+                    <div class="timeline-content">
+                        <p class="leadership-period">2025 - Present</p>
+                        <h3>Vice President of Internals, Western AI</h3>
+                        <p>Managed the internal operations and team experience at Western AI, focusing on onboarding, documentation, and event logistics. Maintained the Notion wiki, organized team socials, tracked meetings and action items, and collected team feedback to improve communication and morale.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-icon">📚</span>
+                    </div>
+                    <div class="timeline-content">
+                        <p class="leadership-period">2025 - Present</p>
+                        <h3>Graphic Designer, Active Minds Western</h3>
+                        <p>Created visually engaging posters and digital graphics using Canva to promote club events, workshops, and mental health initiatives, helping increase student engagement and awareness.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-icon">🔒</span>
+                    </div>
+                    <div class="timeline-content">
+                        <p class="leadership-period">2025 - Present</p>
+                        <h3>Software Developer, Western Cybersecurity</h3>
+                        <p>Building and maintaining software solutions and tools for Western Cybersecurity, supporting security-focused projects and helping develop applications that strengthen the organization's technical infrastructure.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-icon">🌱</span>
+                    </div>
+                    <div class="timeline-content">
+                        <p class="leadership-period">2024 - 2025</p>
+                        <h3>Videographer, Women in Stem</h3>
+                        <p>Handled the video and digital content for Women in STEM, creating TikToks and recap videos of events and trips. I edited using iMovie, CapCut, and Adobe Premiere Pro, focusing on storytelling and engagement to grow the club's online presence.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-icon">💡</span>
+                    </div>
+                    <div class="timeline-content">
+                        <p class="leadership-period">2024 - 2025</p>
+                        <h3>Marketing Director, Western Developer's Society</h3>
+                        <p>Created and managed social media content using Figma, Adobe tools, and CapCut, producing graphics and short-form videos to promote events and grow student engagement.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-icon">💼</span>
+                    </div>
+                    <div class="timeline-content">
+                        <p class="leadership-period">May 2024 - Aug 2024</p>
+                        <h3>Software Developer Intern, Dilka Immigration Services</h3>
+                        <p>Developed software solutions and contributed to technical projects at an immigration services firm, gaining hands-on experience with full-stack development and professional software practices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-arrow"><a href="#resume" class="section-arrow-link">↓</a></div>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume-section">
+        <div class="container">
+            <h2 class="section-title">Resume</h2>
+            <p class="resume-intro">Click below to view my resume.</p>
+            <div class="resume-container">
+                <div class="resume-card" id="resume-card">
+                    <div class="resume-icon">📄</div>
+                    <h3 class="resume-card-title">View Resume</h3>
+                </div>
+                <div class="resume-email-message" id="resume-email-message" style="display: none;">
+                    <div class="email-message-content">
+                        <div class="email-icon">✉️</div>
+                        <h3 class="email-title">Please Email Me for Resume 😊</h3>
+                        <a href="mailto:ertatema7@gmail.com" class="email-link">ertatema7@gmail.com</a>
+                        <button class="btn btn-secondary" id="close-email-message">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-arrow"><a href="#book-of-month" class="section-arrow-link">↓</a></div>
+
+    <!-- Book of the Month Section -->
+    <section id="book-of-month" class="book-of-month-section">
+        <div class="container">
+            <h2 class="section-title">Erta's Book of the Month</h2>
+            
+            <!-- Year Selector -->
+            <div class="year-selector">
+                <h3 class="selector-label">Select Year</h3>
+                <div class="year-buttons" id="year-buttons">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Month Selector -->
+            <div class="month-selector">
+                <h3 class="selector-label" id="month-selector-label">Select Month</h3>
+                <div class="month-buttons" id="month-buttons">
+                    <!-- Months will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Book Display -->
+            <div class="book-display" id="book-display">
+                <div class="book-content">
+                    <div class="book-cover-container">
+                        <div class="book-cover" id="book-cover">
+                            <div class="book-spine"></div>
+                            <div class="book-front">
+                                <div class="book-title-small" id="book-title-small"></div>
+                                <div class="book-author-small" id="book-author-small"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-month-title" id="book-month-title">January 2025 Book of the Month</h3>
+                        <h4 class="book-title" id="book-title">Book Title</h4>
+                        <p class="book-author" id="book-author">By Author Name</p>
+                        <div class="book-rating" id="book-rating">
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <p class="book-description" id="book-description">
+                            Book description will appear here. This is where you can share your thoughts about the book, what you learned, or why you chose it as your book of the month.
+                        </p>
+                        <div class="book-tags" id="book-tags">
+                            <span class="tag">Fiction</span>
+                            <span class="tag">Adventure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Matcha Making Game Section -->
+    <section id="matcha-game" class="matcha-game-section">
+        <div class="container">
+            <h2 class="section-title">How Do You Make Your Matcha? ☕</h2>
+            <p class="game-intro">Create your perfect matcha! Choose hot or cold, then add ingredients in your preferred order.</p>
+            <div class="game-container">
+                <div class="game-main">
+                    <!-- Temperature Selection -->
+                    <div class="temp-selector">
+                        <h3 class="selector-title">Choose Your Matcha Type</h3>
+                        <div class="temp-buttons">
+                            <button class="temp-btn active" data-temp="hot" id="btn-hot">
+                                <span class="temp-icon">🔥</span>
+                                <span class="temp-name">Hot</span>
+                            </button>
+                            <button class="temp-btn" data-temp="cold" id="btn-cold">
+                                <span class="temp-icon">🧊</span>
+                                <span class="temp-name">Cold</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Glass Container with Animation -->
+                    <div class="glass-animation-container">
+                        <!-- Milk pouring animation (hidden by default) -->
+                        <div class="milk-pour-animation" id="milk-pour">
+                            <div class="milk-stream"></div>
+                        </div>
+                        <!-- Matcha whisking animation (hidden by default) -->
+                        <div class="whisk-animation" id="whisk-animation">
+                            <div class="whisk-icon">🍃</div>
+                        </div>
+                        
+                        <div class="glass-container">
+                            <div class="glass" id="glass">
+                                <!-- Ice cubes (for cold) -->
+                                <div class="ice-cubes" id="ice-cubes" style="display: none;">
+                                    <div class="ice-cube"></div>
+                                    <div class="ice-cube"></div>
+                                    <div class="ice-cube"></div>
+                                    <div class="ice-cube"></div>
+                                </div>
+                                <!-- Matcha layer -->
+                                <div class="matcha-layer" id="matcha-layer" style="height: 0%;"></div>
+                                <!-- Milk layer -->
+                                <div class="milk-layer" id="milk-layer" style="height: 0%;"></div>
+                                <!-- Foam layer -->
+                                <div class="foam-layer" id="foam-layer" style="height: 0%;"></div>
+                                <!-- Steam (for hot) -->
+                                <div class="steam" id="steam" style="display: none;">
+                                    <div class="steam-particle"></div>
+                                    <div class="steam-particle"></div>
+                                    <div class="steam-particle"></div>
+                                </div>
+                            </div>
+                            <div class="glass-base"></div>
+                        </div>
+                    </div>
+
+                    <!-- Ingredient Selection -->
+                    <div class="ingredients-panel">
+                        <h3 class="ingredients-title">Add Ingredients</h3>
+                        <div class="ingredients-list">
+                            <button class="ingredient-btn" id="btn-ice" data-ingredient="ice" disabled>
+                                <span class="ingredient-icon">🧊</span>
+                                <span class="ingredient-name">Ice</span>
+                                <span class="ingredient-count" id="count-ice">0</span>
+                                <span class="ingredient-status">(Cold only)</span>
+                            </button>
+                            <button class="ingredient-btn" id="btn-matcha" data-ingredient="matcha">
+                                <span class="ingredient-icon">🍃</span>
+                                <span class="ingredient-name">Matcha</span>
+                                <span class="ingredient-count" id="count-matcha">0</span>
+                            </button>
+                            <button class="ingredient-btn" id="btn-milk" data-ingredient="milk">
+                                <span class="ingredient-icon">🥛</span>
+                                <span class="ingredient-name">Milk</span>
+                                <span class="ingredient-count" id="count-milk">0</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Fill Level Indicator -->
+                    <div class="fill-indicator">
+                        <div class="fill-bar-container">
+                            <div class="fill-bar" id="fill-bar">
+                                <div class="fill-progress" id="fill-progress"></div>
+                            </div>
+                            <span class="fill-percentage" id="fill-percentage">0%</span>
+                        </div>
+                    </div>
+
+                    <!-- Step Indicator -->
+                    <div class="steps-display" id="steps-display">
+                        <p class="steps-text" id="steps-text">Click ingredients to add them! Keep adding until your glass is full.</p>
+                        <div class="ingredient-counts" id="ingredient-counts"></div>
+                    </div>
+
+                    <!-- Reset Button -->
+                    <div class="game-controls">
+                        <button id="reset-matcha" class="btn btn-secondary">Start Over</button>
+                    </div>
+
+                    <!-- Result Message -->
+                    <div class="result-message" id="result-message" style="display: none;">
+                        <h3 class="result-title"></h3>
+                        <p class="result-text"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-links">
+                        <a href="mailto:ertatema7@gmail.com">Email</a>
+                        <a href="www.linkedin.com/in/erta-tema-b980332ab" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/ErtaTema" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Portfolio. Built with passion and matcha ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
