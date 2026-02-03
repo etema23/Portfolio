@@ -673,23 +673,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Update the captions to describe each photo
     const photoData = [
         {
-            src: '/Users/ertatema/Portfolio Web/Photos /image2.jpeg',  // Change this to your photo filename (e.g., 'photos/hiking.jpg')
+            src: 'Photos/image2.jpeg',  // Change this to your photo filename (e.g., 'photos/hiking.jpg')
             caption: 'Me hiking in Albania'  // Update this caption
         },
         {
-            src: '/Users/ertatema/Portfolio Web/Photos /image3.jpeg',  // Change this to your photo filename
+            src: 'Photos/image3.jpeg',  // Change this to your photo filename
             caption: 'Trying snowboard for the first time (Very hard)'  // Update this caption
         },
         {
-            src: '/Users/ertatema/Portfolio Web/Photos /image4.jpeg',  // Change this to your photo filename
+            src: 'Photos/image4.jpeg',  // Change this to your photo filename
             caption: 'Walking through Frankfurt, Germany'  // Update this caption
         },
         {
-            src: '/Users/ertatema/Portfolio Web/Photos /image5.jpeg',  // Change this to your photo filename
+            src: 'Photos/image5.jpeg',  // Change this to your photo filename
             caption: 'Dad and I connecting with the classics'  // Update this caption
         },
         {
-            src: '/Users/ertatema/Portfolio Web/Photos /image6.jpeg',  // Change this to your photo filename
+            src: 'Photos/image6.jpeg',  // Change this to your photo filename
             caption: 'Match day in the city'  // Update this caption
         }
         // You can add more photos by copying the format above and adding more objects to this array
