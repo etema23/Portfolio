@@ -1466,20 +1466,27 @@ section {
 .project-image {
     height: 200px;
     min-height: 200px;
+    flex-shrink: 0;
     background: #8DB584;
     position: relative;
     overflow: hidden;
+    isolation: isolate;
 }
 
 .project-image img {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 .project-overlay {
