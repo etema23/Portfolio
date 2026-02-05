@@ -644,6 +644,10 @@ class MatchaMakingGame {
 // Initialize game when page loads
 let matchaGame;
 document.addEventListener('DOMContentLoaded', () => {
+    // Update footer year automatically
+    const yearEl = document.getElementById('current-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
     matchaGame = new MatchaMakingGame();
     
     // Resume card click handler
