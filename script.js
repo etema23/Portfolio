@@ -942,27 +942,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const bookTitleSmall = document.getElementById('book-title-small');
         const bookAuthor = document.getElementById('book-author');
         const bookAuthorSmall = document.getElementById('book-author-small');
-        const bookRating = document.getElementById('book-rating');
-        const bookDescription = document.getElementById('book-description');
-        const bookTags = document.getElementById('book-tags');
-        
         if (monthTitle) monthTitle.textContent = `${month} ${year} Book of the Month`;
         if (bookTitle) bookTitle.textContent = book.title;
         if (bookTitleSmall) bookTitleSmall.textContent = book.title;
         if (bookAuthor) bookAuthor.textContent = book.author === '—' ? '' : `By ${book.author}`;
         if (bookAuthorSmall) bookAuthorSmall.textContent = book.author;
-        
-        if (bookRating) {
-            if (book.rating > 0) {
-                const stars = '★'.repeat(book.rating) + '☆'.repeat(5 - book.rating);
-                bookRating.innerHTML = `<span class="stars">${stars}</span>`;
-            } else {
-                bookRating.innerHTML = '';
-            }
-        }
-        
-        if (bookDescription) bookDescription.textContent = book.description;
-        if (bookTags) bookTags.innerHTML = book.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
     }
     
     updateMonthLabel();
