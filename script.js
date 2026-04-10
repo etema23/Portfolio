@@ -841,20 +841,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Book data by year and month. Add your reads per year.
     const booksByYear = {
         2025: {
-            'January': { title: "The Seven Husbands of Evelyn Hugo", author: 'Taylor Jenkins Reid', image: '/Users/ertatema/Portfolio Web/Photos/7husbands.jpg' },
-            'March': { title: "Where the Crawdads Sing', author: 'Delia Owens",image: '/Users/ertatema/Portfolio Web/Photos/Crawdads.jpg' },  },
-            'May': { title: "A Thousand Splendid Suns", author: 'Khaled Hosseini', image: '/Users/ertatema/Portfolio Web/Photos/SplendidSuns.jpg' },
-            'June': { title: "People We Meet On Vacation", author: 'Emily Henry', image: '/Users/ertatema/Portfolio Web/Photos/PeopleWeMeet.jpg' },
-            'July': { title: "The Great Gatsby", author: 'F. Scott Fitzgerald', image: '/Users/ertatema/Portfolio Web/Photos/GreatGatsby.jpg' },
-            'August': { title: "Don't Believe Everything You Think", author: 'Joseph Nguyen', image: '/Users/ertatema/Portfolio Web/Photos/DB.jpg' },
-            'September': { title: 'Cold Blood', author: 'Robert Bryndza', image: '/Users/ertatema/Portfolio Web/Photos/ColdBlood.jpg' },
-            'October' : {title: 'The Midnight Library', author: 'Matt Haig', image:'/Users/ertatema/Portfolio Web/Photos/MidnightLib.jpg'}
-            'December': { title: 'The Let Them Theory', author: 'Mel Robbins', image: '/Users/ertatema/Portfolio Web/Photos/LetThem.jpg' },
+            'January': { title: 'The Seven Husbands of Evelyn Hugo', author: 'Taylor Jenkins Reid', image: 'Photos/7husbands.jpg' },
+            'March': { title: 'Where the Crawdads Sing', author: 'Delia Owens', image: 'Photos/Crawdads.jpg' },
+            'May': { title: 'A Thousand Splendid Suns', author: 'Khaled Hosseini', image: 'Photos/SplendidSuns.jpg' },
+            'June': { title: 'People We Meet On Vacation', author: 'Emily Henry', image: 'Photos/PeopleWeMeet.jpg' },
+            'July': { title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', image: 'Photos/GreatGatsby.jpg' },
+            'August': { title: "Don't Believe Everything You Think", author: 'Joseph Nguyen', image: 'Photos/DB.jpg' },
+            'September': { title: 'Cold Blood', author: 'Robert Bryndza', image: 'Photos/ColdBlood.jpg' },
+            'October': { title: 'The Midnight Library', author: 'Matt Haig', image: 'Photos/MidnightLib.jpg' },
+            'December': { title: 'The Let Them Theory', author: 'Mel Robbins', image: 'Photos/LetThem.jpg' },
+        },
         2026: {
-            'January': { title: 'The Silent Patient', author: 'Alex Michaelides', image: '/Users/ertatema/Portfolio Web/Photos/SilentPatient.jpg' },
-            'February': { title: 'The Fatal Witness', author: 'Robert Bryndza', image: '/Users/ertatema/Portfolio Web/Photos/FatalWit.jpg' },
-            'April': { title: 'The Mountain Is You', author: 'Brianna Wiest', image: '/Users/ertatema/Portfolio Web/Photos/Mountainisyou.png' },
-    
+            'January': { title: 'The Silent Patient', author: 'Alex Michaelides', image: 'Photos/SilentPatient.jpg' },
+            'February': { title: 'The Fatal Witness', author: 'Robert Bryndza', image: 'Photos/FatalWit.jpg' },
+            'April': { title: 'The Mountain Is You', author: 'Brianna Wiest', image: 'Photos/Mountainisyou.png' },
+        },
+    };
+
     const currentDate = new Date();
     const yearsAvailable = Object.keys(booksByYear).map(Number).sort((a, b) => b - a);
     const defaultYear = yearsAvailable.includes(currentDate.getFullYear())
@@ -924,14 +927,18 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const monthTitle = document.getElementById('book-month-title');
         const bookTitle = document.getElementById('book-title');
-        const bookTitleSmall = document.getElementById('book-title-small');
         const bookAuthor = document.getElementById('book-author');
-        const bookAuthorSmall = document.getElementById('book-author-small');
+        const bookCoverImg = document.getElementById('book-cover-img');
+        const bookFront = document.querySelector('.book-front');
+
         if (monthTitle) monthTitle.textContent = `${month} ${year} Book of the Month`;
         if (bookTitle) bookTitle.textContent = book.title;
-        if (bookTitleSmall) bookTitleSmall.textContent = book.title;
         if (bookAuthor) bookAuthor.textContent = book.author === '—' ? '' : `By ${book.author}`;
-        if (bookAuthorSmall) bookAuthorSmall.textContent = book.author;
+        if (bookCoverImg && book.image) {
+            bookCoverImg.src = book.image;
+            bookCoverImg.style.display = 'block';
+            if (bookFront) bookFront.style.background = 'none';
+        }
     }
     
     updateMonthLabel();
