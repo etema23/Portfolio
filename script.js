@@ -841,34 +841,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Book data by year and month. Add your reads per year.
     const booksByYear = {
         2025: {
-            'January': { title: 'The Seven Husbands of Evelyn Hugo', author: 'Taylor Jenkins Reid', rating: 5, description: 'A captivating story about a reclusive Hollywood icon who finally decides to tell her story. This book beautifully explores themes of ambition, love, and the price of fame.', tags: ['Fiction', 'Historical Fiction', 'LGBTQ+'] },
-            'February': { title: 'Atomic Habits', author: 'James Clear', rating: 5, description: 'An incredible guide to building good habits and breaking bad ones. Clear provides practical strategies for making small changes that lead to remarkable results.', tags: ['Self-Help', 'Productivity', 'Psychology'] },
-            'March': { title: 'The Midnight Library', author: 'Matt Haig', rating: 4, description: 'A thought-provoking novel about life, regrets, and the infinite possibilities that exist. A beautiful exploration of what it means to live a fulfilling life.', tags: ['Fiction', 'Philosophy', 'Fantasy'] },
-            'April': { title: 'Project Hail Mary', author: 'Andy Weir', rating: 5, description: 'A thrilling science fiction adventure that combines humor, science, and heart. An astronaut wakes up alone on a spaceship with no memory of his mission.', tags: ['Science Fiction', 'Adventure', 'Space'] },
-            'May': { title: 'Educated', author: 'Tara Westover', rating: 5, description: 'A powerful memoir about a woman who grows up in a survivalist family and eventually earns a PhD from Cambridge. A testament to the power of education.', tags: ['Memoir', 'Biography', 'Education'] },
-            'June': { title: 'The Song of Achilles', author: 'Madeline Miller', rating: 5, description: 'A beautiful retelling of the Iliad from Patroclus\'s perspective. A story of love, war, and the bonds that define us.', tags: ['Fiction', 'Mythology', 'Historical Fiction'] },
-            'July': { title: 'Dune', author: 'Frank Herbert', rating: 5, description: 'An epic science fiction masterpiece set on the desert planet Arrakis. A complex tale of politics, religion, and ecology.', tags: ['Science Fiction', 'Fantasy', 'Classic'] },
-            'August': { title: 'The Invisible Life of Addie LaRue', author: 'V.E. Schwab', rating: 4, description: 'A woman makes a deal with the devil and becomes immortal, but no one remembers her. A beautiful exploration of memory, art, and what makes life meaningful.', tags: ['Fantasy', 'Fiction', 'Historical Fiction'] },
-            'September': { title: 'Sapiens', author: 'Yuval Noah Harari', rating: 5, description: 'A brief history of humankind that explores how Homo sapiens came to dominate the world. Thought-provoking and eye-opening.', tags: ['Non-Fiction', 'History', 'Anthropology'] },
-            'October': { title: 'Circe', author: 'Madeline Miller', rating: 5, description: 'A reimagining of the Greek myth of Circe, the witch of Aiaia. A powerful story of a woman finding her own power and voice.', tags: ['Fiction', 'Mythology', 'Fantasy'] },
-            'November': { title: 'The Psychology of Money', author: 'Morgan Housel', rating: 4, description: 'Timeless lessons on wealth, greed, and happiness. A refreshing take on personal finance that focuses on behavior over formulas.', tags: ['Finance', 'Psychology', 'Self-Help'] },
-            'December': { title: 'Klara and the Sun', author: 'Kazuo Ishiguro', rating: 5, description: 'A story told from the perspective of an artificial friend observing the world. A beautiful meditation on love, consciousness, and what it means to be human.', tags: ['Science Fiction', 'Literary Fiction', 'Dystopian'] }
-        },
+            'January': { title: "The Seven Husbands of Evelyn Hugo", author: 'Taylor Jenkins Reid', image: '/Users/ertatema/Portfolio Web/Photos/7husbands.jpg' },
+            'March': { title: "Where the Crawdads Sing', author: 'Delia Owens",image: '/Users/ertatema/Portfolio Web/Photos/Crawdads.jpg' },  },
+            'May': { title: "A Thousand Splendid Suns", author: 'Khaled Hosseini', image: '/Users/ertatema/Portfolio Web/Photos/SplendidSuns.jpg' },
+            'June': { title: "People We Meet On Vacation", author: 'Emily Henry', image: '/Users/ertatema/Portfolio Web/Photos/PeopleWeMeet.jpg' },
+            'July': { title: "The Great Gatsby", author: 'F. Scott Fitzgerald', image: '/Users/ertatema/Portfolio Web/Photos/GreatGatsby.jpg' },
+            'August': { title: "Don't Believe Everything You Think", author: 'Joseph Nguyen', image: '/Users/ertatema/Portfolio Web/Photos/DB.jpg' },
+            'September': { title: 'Cold Blood', author: 'Robert Bryndza', image: '/Users/ertatema/Portfolio Web/Photos/ColdBlood.jpg' },
+            'October' : {title: 'The Midnight Library', author: 'Matt Haig', image:'/Users/ertatema/Portfolio Web/Photos/MidnightLib.jpg'}
+            'December': { title: 'The Let Them Theory', author: 'Mel Robbins', image: '/Users/ertatema/Portfolio Web/Photos/LetThem.jpg' },
         2026: {
-            'January': { title: 'Coming soon', author: '—', rating: 0, description: 'Add your January 2026 pick in script.js under booksByYear[2026].', tags: ['TBR'] },
-            'February': { title: 'Coming soon', author: '—', rating: 0, description: 'Add your February 2026 pick in script.js under booksByYear[2026].', tags: ['TBR'] },
-            'March': { title: 'Coming soon', author: '—', rating: 0, description: 'Add your March 2026 pick in script.js under booksByYear[2026].', tags: ['TBR'] },
-            'April': { title: 'Coming soon', author: '—', rating: 0, description: 'Add your April 2026 pick in script.js under booksByYear[2026].', tags: ['TBR'] },
-            'May': { title: 'Coming soon', author: '—', rating: 0, description: 'Add your May 2026 pick in script.js under booksByYear[2026].', tags: ['TBR'] },
-            'June': { title: 'Coming soon', author: '—', rating: 0, description: 'Add your June 2026 pick in script.js under booksByYear[2026].', tags: ['TBR'] },
-            'July': { title: 'Coming soon', author: '—', rating: 0, description: 'Add your July 2026 pick in script.js under booksByYear[2026].', tags: ['TBR'] },
-            'August': { title: 'Coming soon', author: '—', rating: 0, description: 'Add your August 2026 pick in script.js under booksByYear[2026].', tags: ['TBR'] },
-            'September': { title: 'Coming soon', author: '—', rating: 0, description: 'Add your September 2026 pick in script.js under booksByYear[2026].', tags: ['TBR'] },
-            'October': { title: 'Coming soon', author: '—', rating: 0, description: 'Add your October 2026 pick in script.js under booksByYear[2026].', tags: ['TBR'] },
-            'November': { title: 'Coming soon', author: '—', rating: 0, description: 'Add your November 2026 pick in script.js under booksByYear[2026].', tags: ['TBR'] },
-            'December': { title: 'Coming soon', author: '—', rating: 0, description: 'Add your December 2026 pick in script.js under booksByYear[2026].', tags: ['TBR'] }
-        }
-    };
+            'January': { title: 'The Silent Patient', author: 'Alex Michaelides', image: '/Users/ertatema/Portfolio Web/Photos/SilentPatient.jpg' },
+            'February': { title: 'The Fatal Witness', author: 'Robert Bryndza', image: '/Users/ertatema/Portfolio Web/Photos/FatalWit.jpg' },
+            'April': { title: 'The Mountain Is You', author: 'Brianna Wiest', image: '/Users/ertatema/Portfolio Web/Photos/Mountainisyou.png' },
     
     const currentDate = new Date();
     const yearsAvailable = Object.keys(booksByYear).map(Number).sort((a, b) => b - a);
