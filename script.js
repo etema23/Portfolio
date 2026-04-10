@@ -887,6 +887,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 selectedYear = parseInt(btn.dataset.year);
                 updateMonthLabel();
                 renderMonthButtons();
+                const yearData = booksByYear[selectedYear];
+                if (yearData && !yearData[selectedMonth]) {
+                    selectedMonth = monthNames.find(m => yearData[m]);
+                }
                 displayBook(selectedYear, selectedMonth);
             });
             yearButtonsContainer.appendChild(btn);
@@ -903,7 +907,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const yearData = booksByYear[selectedYear];
         if (!yearData) return;
         
-        monthNames.forEach(month => {
+        monthNames.filter(month => yearData[month]).forEach(month => {
             const btn = document.createElement('button');
             btn.className = 'month-btn';
             btn.textContent = month;
