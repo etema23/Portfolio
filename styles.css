@@ -137,6 +137,26 @@ body {
     padding-top: 80px;
 }
 
+.branch {
+    position: absolute;
+    opacity: 0.45;
+    pointer-events: none;
+}
+
+.branch-top-left {
+    top: -20px;
+    left: -20px;
+    width: 320px;
+    height: 320px;
+}
+
+.branch-bottom-right {
+    bottom: -20px;
+    right: -20px;
+    width: 320px;
+    height: 320px;
+}
+
 .intro-section::before {
     content: '';
     position: absolute;
