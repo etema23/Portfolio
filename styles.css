@@ -225,6 +225,39 @@ body {
     animation: fadeInUp 1s ease 0.6s both;
 }
 
+.social-links {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    animation: fadeInUp 1s ease 0.8s both;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: var(--matcha-dark);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1.5px solid var(--matcha-green);
+    transition: all 0.3s ease;
+}
+
+.social-link svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.social-link:hover {
+    background: var(--matcha-green);
+    color: white;
+}
+
 .btn {
     padding: 12px 30px;
     border-radius: 30px;
